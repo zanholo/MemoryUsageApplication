@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryMeasurement", "MemoryUsage\MemoryMeasurement.csproj", "{18D43B31-2339-4783-84A3-A388E3041DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{9364E93D-5E27-458E-9A3F-F2383AFFE4AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18D43B31-2339-4783-84A3-A388E3041DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D43B31-2339-4783-84A3-A388E3041DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D43B31-2339-4783-84A3-A388E3041DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D43B31-2339-4783-84A3-A388E3041DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9364E93D-5E27-458E-9A3F-F2383AFFE4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9364E93D-5E27-458E-9A3F-F2383AFFE4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9364E93D-5E27-458E-9A3F-F2383AFFE4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9364E93D-5E27-458E-9A3F-F2383AFFE4AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE934FDE-4E08-4B09-9E51-6847BC5B1728}
+	EndGlobalSection
+EndGlobal

@@ -6,6 +6,7 @@ namespace MemoryUsageApplication.Application
     {
         private int time;
         private Thread threadMemory;
+        private string message;
 
         public MemoryMeasurement()
         {
@@ -56,8 +57,12 @@ namespace MemoryUsageApplication.Application
             using Process processo = Process.GetCurrentProcess();
             // Current usage of memory
             long memoryUsage = (processo.PrivateMemorySize64 / 1024) / 1024; // Convert in MB
+
             // Imprime o uso de memória
-            Console.WriteLine("Memory usage = {0} MegaBytes", memoryUsage);
+            if (message != null && message.ToString() != string.Empty)
+                Console.WriteLine(message + " = {0} MegaBytes", memoryUsage);
+            else            
+                Console.WriteLine(DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy") + " -  Memory usage = {0} MegaBytes", memoryUsage);
         }
         
     }

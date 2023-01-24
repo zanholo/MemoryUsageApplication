@@ -27,7 +27,7 @@ namespace MemoryUsageApplication.Application
         /// Create a Thread than runs assincronely that shows amount of the memory usage
         /// </summary>
         public void MemoryUsageInThread()
-        {            
+        {
             threadMemory.Start();
         }
 
@@ -44,26 +44,29 @@ namespace MemoryUsageApplication.Application
         {
             // Looping infinto 
             while (true)
-            {                
-               this.MemoryUsage();
+            {
+                this.MemoryUsage();
                 // Await rodando
                 System.Threading.Thread.Sleep(time * 1000);
-            } 
+            }
             //Roda enquanto a aplicação estiver viva
-        }               
+        }
 
         private void MemoryUsage()
         {
-            using Process processo = Process.GetCurrentProcess();
-            // Current usage of memory
-            long memoryUsage = (processo.PrivateMemorySize64 / 1024) / 1024; // Convert in MB
+            using (Process processo = Process.GetCurrentProcess())
+            {
+                // Current usage of memory
+                long memoryUsage = (processo.PrivateMemorySize64 / 1024) / 1024; // Convert in MB
 
-            // Imprime o uso de memória
-            if (message != null && message.ToString() != string.Empty)
-                Console.WriteLine(message + " = {0} MegaBytes", memoryUsage);
-            else            
-                Console.WriteLine(DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy") + " -  Memory usage = {0} MegaBytes", memoryUsage);
+                // Imprime o uso de memória
+                if (message != null && message.ToString() != string.Empty)
+                    Console.WriteLine(message + " = {0} MegaBytes", memoryUsage);
+                else
+                    Console.WriteLine(DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy") + " -  Memory usage = {0} MegaBytes", memoryUsage);
+            };
+
         }
-        
+
     }
 }
